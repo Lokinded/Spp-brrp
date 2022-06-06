@@ -102,16 +102,16 @@ module.exports = {
                                         collected.deferUpdate()
 
                                         if (ticket === '1') {
-      message.delete()
+      
       const aprovado = client.channels.cache.get('970167509233860708');  
       message.aprovado.send(`${titulo} aprovado!`);
                                         };
                                         if (ticket === '2') {
-    message.delete()                                  
+                                 
     const reprovado = client.channels.cache.get('970167511985320017');
     message.aprovado.send(`${titulo} reprovado!`);
     
-                                    });
+                                    })
                                 });
                             });
                         });
@@ -120,5 +120,5 @@ module.exports = {
             });
         }
     }
-}
+ }
 }
