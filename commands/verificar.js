@@ -41,6 +41,7 @@ module.exports = {
     message.reply({ embeds: [embed_2] }).then(m_2 => {
             
   let coletor_2 = message.channel.createMessageCollector({ filter: mm => mm.author.id == message.author.id, max: 1 });
+    
 
   coletor_3.on("collect", (palavra_3) => {
       
@@ -59,27 +60,32 @@ module.exports = {
 > Gamertag:${titulo}
 > Social Club: ${desc}`)],components: [row] }).then(msg =>{
 
-const filtro = (interaction) =>
+const filtro = (interaction) => 
+
 interaction.isSelectMenu()
+
 const coletor = msg.createMessageComponentCollector({filtro});
-coletor.on('collect', async(collected) => {
-let ticket = collected.values[0]
+
+coletor.on('collect', async (collected) => {
+    
+let ticket = collected.values[0];
+
 collected.deferUpdate()
 
 if(ticket === '1'){
     msg.edit({embeds: [embed]});
-}
+};
 
 if(ticket === '2'){
    msg.edit({embeds: [embed2]});
-}
+};
 
-})
-})
-})
-})
-})
-}
 
-  }
+});
+});
+});
+});
+});
+};
+};
 };
