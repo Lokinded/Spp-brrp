@@ -45,6 +45,10 @@ module.exports = {
             
   let coletor_2 = message.channel.createMessageCollector({ filter: mm => mm.author.id == message.author.id, max: 1 });
   
+  coletor_2.on("collect", (palavra_2) => {
+  let titulo = palavra_2.content;
+   message.reply({ embeds: [embed_3] }).then(m_3 => {
+  
   let coletor_3 = message.channel.createMessageCollector({ filter: mm => mm.author.id == message.author.id, max: 1 });
 
   coletor_3.on("collect", (palavra_3) => {
@@ -84,7 +88,7 @@ if(ticket === '2'){
    msg.edit({embeds: [embed2]});
 };
 
-
+})
 });
 });
 });
