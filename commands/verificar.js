@@ -12,7 +12,7 @@ module.exports = {
    const row = new Discord.MessageActionRow()
    .addComponents(
      new MessageSelectMenu()
-      .setCustomId('ticket-abert')
+      .setCustomId('1')
       .setPlaceholder('Meus comandos...')
       .addOptions([
        {
