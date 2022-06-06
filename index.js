@@ -312,6 +312,6 @@ Bem-vindo(a) ao servidor \`${guild.name}\`
       });  
 
 
-
-client.login(config.token); 
+//vamos?
+client.login(process.env.token); 
 discordModals(client); 
