@@ -1,4 +1,6 @@
+const { MessageActionRow, MessageEmbed, MessageSelectMenu } = require('discord.js');
 const Discord = require("discord.js")
+
 
 module.exports = {
     namem: 'verificar',
@@ -9,7 +11,8 @@ module.exports = {
    
    const row = new Discord.MessageActionRow()
    .addComponents(
-      .setCustomId('1')
+     new MessageSelectMenu()
+      .setCustomId('ticket-abert')
       .setPlaceholder('Meus comandos...')
       .addOptions([
        {
@@ -27,7 +30,7 @@ module.exports = {
   ]));
        
  if (!message.member.permissions.has("ADMINISTRATOR")) {
-            message.reply(`Você não possui a permissão de \`Administrador\` para poder utilziar este comando.`)
+  message.reply(`Você não possui a permissão de \`Administrador\` para poder utilziar este comando.`)
     } else {
         
    let embed_2 = new Discord.MessageEmbed()
@@ -87,5 +90,5 @@ if(ticket === '2'){
 });
 });
 };
-};
+}
 };
