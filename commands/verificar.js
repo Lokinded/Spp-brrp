@@ -102,28 +102,14 @@ module.exports = {
                                         collected.deferUpdate()
 
                                         if (ticket === '1') {
-                                            msg.edit(
-                                              
-                                                  { embeds: [
-      new Discord.MessageEmbed()
-         .setColor("RANDOM")
-         .setTimestamp(new Date)
-         .setThumbnail(message.guild.iconURL({ dynamic: true }))
-         .setFooter(message.guild.name, message.guild.iconURL({ dynamic: true }))
-         .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
-         .setTitle(`Verificação Social Club`)
-         .setDescription(`> Registro De ${message.author}
-> Gamertag:${titulo}
-> Social Club: ${desc}`)]}
-                                              
-                                                );
+      message.delete()
+      const aprovado = client.channels.cache.get('970167509233860708');  
+      message.aprovado.send(`${titulo} aprovado!`)
                                         };
-
                                         if (ticket === '2') {
-                                            msg.edit({
-                                                embeds: [embed2]});
-                                        };
-
+    message.delete()                                  
+    const reprovado = client.channels.cache.get('970167511985320017');
+    message.aprovado.send(`${titulo} reprovado!`)                              
                                     });
                                 });
                             });
