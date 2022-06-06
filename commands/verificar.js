@@ -1,3 +1,4 @@
+
 const { MessageActionRow, MessageEmbed, MessageSelectMenu } = require('discord.js');
 const Discord = require("discord.js")
 
@@ -88,12 +89,12 @@ if(ticket === '2'){
    msg.edit({embeds: [embed2]});
 };
 
-})
+});
+});
 });
 });
 });
 });
 });
 };
-}
 };
