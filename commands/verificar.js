@@ -44,7 +44,8 @@ module.exports = {
     message.reply({ embeds: [embed_2] }).then(m_2 => {
             
   let coletor_2 = message.channel.createMessageCollector({ filter: mm => mm.author.id == message.author.id, max: 1 });
-    
+  
+  let coletor_3 = message.channel.createMessageCollector({ filter: mm => mm.author.id == message.author.id, max: 1 });
 
   coletor_3.on("collect", (palavra_3) => {
       
