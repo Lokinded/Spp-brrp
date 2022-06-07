@@ -60,7 +60,7 @@ module.exports = {
 
                         let coletor_3 = message.channel.createMessageCollector({
                             filter: mm => mm.author.id == message.author.id, max: 1
-                        
+                        });
 
                         coletor_3.on("collect", (palavra_3) => {
 
@@ -87,37 +87,39 @@ module.exports = {
                                             > Social Club: ${desc}`)], components: [row]
                                 }).then(msg => {
 
-   const filtro = (interaction) =>
+                                    const filtro = (interaction) =>
 
-   interaction.isSelectMenu()
+                                    interaction.isSelectMenu()
 
-   const coletor = msg.createMessageComponentCollector({ filtro });
+                                    const coletor = msg.createMessageComponentCollector({
+                                        filtro
+                                    });
 
-     coletor.on('collect', async (collected) => { //hum
+                                    coletor.on('collect', async (collected) => {
 
-     let ticket = collected.values[0];
+                                        let ticket = collected.values[0];
 
-     collected.deferUpdate()
+                                        collected.deferUpdate()
 
-     if (ticket === '1') {
-      
-      const aprovado = client.channels.cache.get('970167509233860708');  
-      aprovado.send(`${titulo} aprovado!`);
+                                        if (ticket === '1') {
+                                            
+ const aprovado = client.channels.cache.get('970167509233860708');  
+      aprovado.send(`${titulo} aprovado!`)
+  
                                         };
+
                                         if (ticket === '2') {
-                                 
-    const reprovado = client.channels.cache.get('970167511985320017');
-    reprovado.send(`${titulo} reprovado!`);
-    
-                                    }
-         
-                                    })
-                                })
-                            })
-                        })
-                    })
-                })
-            })
+                                            const reprovado = client.channels.cache.get('970167511985320017');
+    reprovado.send(`${titulo} reprovado!`)
+                                        };
+
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
         }
     }
-};
+}
