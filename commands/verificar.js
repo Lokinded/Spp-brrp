@@ -109,7 +109,7 @@ module.exports = {
                                         };
 
                                         if (ticket === '2') {
-                                            const reprovado = client.channels.cache.get('970167511985320017');
+                                          const reprovado = client.channels.cache.get('970167511985320017');
     reprovado.send(`${message.author} Você  Foi reprovado!`)
                                         };
 
