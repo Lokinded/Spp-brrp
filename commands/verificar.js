@@ -17,17 +17,17 @@ module.exports = {
         .addComponents(
             new MessageSelectMenu()
             .setCustomId('1')
-            .setPlaceholder('Meus comandos...')
+            .setPlaceholder('Menu Verificação')
             .addOptions([{
                 label: 'Aceitar',
                 description: 'Aceitar Membro',
-                emoji: '🏠',
+                emoji: '✔',
                 value: '1',
             },
                 {
                     label: 'Recusar',
                     description: 'Recusar Membro',
-                    emoji: '👑',
+                    emoji: '❌',
                     value: '2',
                 },
             ]));
@@ -66,7 +66,7 @@ module.exports = {
 
                             let desc = palavra_3.content;
 
-                            message.reply(`Sua Verificação Foi Enviad com sucesso.`).then(m => {
+                            message.reply(`Sua Verificação Foi Enviada com sucesso!.`).then(m => {
                                 chat.send({
                                     embeds: [
                                         new Discord.MessageEmbed()
@@ -104,13 +104,13 @@ module.exports = {
                                         if (ticket === '1') {
                                             
  const aprovado = client.channels.cache.get('970167509233860708');  
-      aprovado.send(`${titulo} aprovado!`)
+      aprovado.send(`${message.author} Você  Foi Aprovado`)
   
                                         };
 
                                         if (ticket === '2') {
                                             const reprovado = client.channels.cache.get('970167511985320017');
-    reprovado.send(`${titulo} reprovado!`)
+    reprovado.send(`${message.author} Você  Foi reprovado!`)
                                         };
 
                                     });
