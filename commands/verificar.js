@@ -102,14 +102,15 @@ module.exports = {
                                         collected.deferUpdate()
 
                                         if (ticket === '1') {
-                                            
+  msg.edit({content: `${message.author} foi aprovado!`);         
  const aprovado = client.channels.cache.get('970167509233860708');  
       aprovado.send(`${message.author} Você  Foi Aprovado`)
   
                                         };
 
                                         if (ticket === '2') {
-                                          const reprovado = client.channels.cache.get('970167511985320017');
+                 msg.edit({content: `${message.author} foi reprovado!`);         
+           const reprovado = client.channels.cache.get('970167511985320017');
     reprovado.send(`${message.author} Você  Foi reprovado!`)
                                         };
 
