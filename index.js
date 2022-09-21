@@ -1,23 +1,12 @@
-const db = require("quick.db")
-const { Modal, TextInputComponent, showModal } = require('discord-modals'); 
-
+const { Modal, TextInputComponent, showModal } = require('discord-modals');
 const discordModals = require('discord-modals');
-
 const { glob } = require("glob");
 const { promisify } = require("util");
-
 const globPromise = promisify(glob);
-
-
+const db = require("quick.db")
 const ping = require("kettraworld-ping") 
-
-// caso queira criar um webserver
 ping.webserver(3000);
-
-ping.ping("https://Ssp-1.lokinded.repl.co")  ;
-
-
-console.log("NodeJS Version: " + process.version);
+ping.ping("https://Ssp-1.lokinded.repl.co");
 const Discord = require("discord.js"); 
 const config = require("./config.json"); 
 const client = new Discord.Client({intents: 32767});
